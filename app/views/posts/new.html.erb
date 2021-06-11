@@ -1,0 +1,37 @@
+<div class="container">
+  <h2 class="text-center">新規投稿する</h2>
+
+  <%= form_with model:@post ,local:true do |f| %>
+   <div class="row new-post">
+     <h3 class="new-post-title">タイトル</h3>
+     <div class="form-group">
+       <%= f.text_field :title,class:"form-control input-lg" %>
+     </div>
+   </div>
+
+   <div class="row new-post">
+      <h3 class="new-post-title">投稿内容</h3>
+        <div class="form-group">
+          <%= f.text_area :body, rows: "10", cols: "50", class:"form-control input-lg" %>
+        </div>
+    </div>
+
+    <div class="row new-post">
+      <h3 class="new-post-title">画像の選択</h3>
+        <div class="new-post-image-box">
+          <% if @post.image.present? %>
+            <%= attachment_image_tag @post.image, class: "new-post-image", style: "border-radius: 15px;" %>
+          <% else %>
+            <%= image_tag "no_image.jpg", class: "new-post-image", style: "border-radius: 15px;" %>
+          <% end %>
+        </div>
+        <div class="new-post-image-button">
+          <%= f.attachment_field :image %>
+        </div>
+    </div>
+
+    <div class="row new-post">
+      <%= f.submit "投稿する", class:"btn btn-default btn-lg new-post-post-button" %>
+    </div>
+  <% end %>
+</div>
