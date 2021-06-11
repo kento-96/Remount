@@ -35,7 +35,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
       t.string :name
       t.text :introduction
       t.string :profile_image_id
+      t.boolean "is_deleted", default: false
       t.timestamps null: false
+      
     end
 
     add_index :users, :email,                unique: true

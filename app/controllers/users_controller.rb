@@ -23,13 +23,16 @@ class UsersController < ApplicationController
     end
   end
 
-  def destroy
-  end
-
-  def unsbscribe
+  def unsubscribe
+    @user = current_user
   end
 
   def withdraw
+    @user = User.find(params[:id])
+    #is_deletedカラムにフラグを立てる(defaultはfalse)
+    @user.update(is_deleted: true)
+    reset_session
+    redirect_to root_path
   end
 
   private

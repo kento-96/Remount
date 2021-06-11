@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   resources :users ,only: [:show, :edit, :update] do
     collection do
-      get "unsbscribe"
-      patch "withdraw"
+      get '/users/:id/unsubscribe' => 'users#unsubscribe', as: 'unsubscribe'
+      patch '/users/:id/withdraw' => 'users#withdraw', as: 'withdraw'
     end
 
      resource :relationships, only: [:create, :destroy]
