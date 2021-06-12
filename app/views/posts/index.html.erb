@@ -1,0 +1,39 @@
+<div class="texts-wrapper">
+   <div class="contents-title text-center">
+     <h3>投稿一覧</h3>
+     <div class="row">
+       <% @posts.each do |post| %>
+         <div class="col-12 col-md-6 col-lg-4">
+           <div class="card">
+             <div>
+                <%= link_to post_path(post) do %>
+                <%= attachment_image_tag post, :image, fallback: "no-image.jpg",class:"card-img-top" %>
+                <% end %>
+             </div>
+             <p class="post-index-user-name">
+                <i class="fas fa-user-circle"></i>
+                <%= post.user.name %>
+             </p>
+               <div class="card-body">
+                 <p class="card-title">
+                   <%= post.title %>
+                 </p>
+                 <p class="card-text">
+                   <%= post.body.truncate(30) %>
+                 </p>
+                 <p class="card-text">
+                    <time>
+                      <%= post.updated_at.strftime("%Y-%m-%d %H:%M") %>
+                    </time>
+                 </p>
+               </div>
+           </div>
+         </div>
+       <% end %>
+     </div>
+   </div>
+ </div>
+
+ <div class="post-index-pagination">
+    <%= paginate @posts %>
+ </div>

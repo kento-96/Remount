@@ -15,6 +15,9 @@ class PostsController < ApplicationController
   end
 
   def index
+    @posts = Post.all
+             .order(created_at: :desc) #新しい順に並び替える
+             .page(params[:page]).per(10)
   end
 
   def edit
