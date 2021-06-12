@@ -1,0 +1,40 @@
+<div class="container">
+  <h2 class="text-center">投稿編集画面</h2>
+
+  <%= form_with model:@post ,local:true do |f| %>
+   <div class="row edit-post">
+     <h3 class="edit-post-title">タイトル</h3>
+     <div class="form-group">
+       <%= f.text_field :title,class:"form-control input-lg" %>
+     </div>
+   </div>
+
+   <div class="row edit-post">
+      <h3 class="edit-post-title">投稿内容</h3>
+        <div class="form-group">
+          <%= f.text_area :body, rows: "10", cols: "50", class:"form-control input-lg" %>
+        </div>
+    </div>
+
+    <div class="row edit-post">
+      <h3 class="edit-post-title">画像の選択</h3>
+        <div class="edit-post-image-box">
+          <% if @post.image.present? %>
+            <%= attachment_image_tag @post,:image, class: "edit-post-image", style: "border-radius: 15px;",size: "300x300" %>
+          <% else %>
+            <%= image_tag "no_image.jpg", class: "edit-post-image", style: "border-radius: 15px;" ,size: "300x300"%>
+          <% end %>
+        </div>
+        <div class="edit-post-image-button">
+          <%= f.attachment_field :image %>
+        </div>
+    </div>
+
+    <div class="row edit-post">
+      <%= f.submit "更新する", class:"btn btn-default btn-lg new-post-post-button" %>
+    </div>
+  <% end %>
+  <%= link_to "Show",post_path(@post.id)%>
+       |
+  <%= link_to "Back",posts_path %>
+</div>
