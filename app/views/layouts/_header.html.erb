@@ -10,22 +10,45 @@
          <li class="nav-item">
            <%= link_to "マイページ",user_path(current_user),class:"btn btn-outline-secondary mx-3 my-1" %>
          </li>
-         <li class="nav-item">
-           <%= link_to "投稿一覧", posts_path,class:"btn btn-outline-secondary mx-3 my-1" %>
+         <li class="dropdown">
+           <button class="btn btn-outline-secondary mx-3 my-1 dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              一覧
+              <span class="caret"></span>
+           </button>
+           <ul>
+             <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+               <li><%= link_to "投稿一覧", posts_path,class:"btn btn-default dropdown-item" %></li>
+               <li><%= link_to "山一覧", mountains_path,class:"btn btn-default dropdown-item" %></li>
+             </div>
+           </ul>
          </li>
-         <li class="nav-item">
-           <%= link_to "投稿する", new_post_path,class:"btn btn-outline-secondary mx-3 my-1" %>
+
+         <li class="dropdown">
+           <button class="btn btn-outline-secondary mx-3 my-1 dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              投稿
+              <span class="caret"></span>
+           </button>
+           <ul>
+             <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+               <%= link_to "投稿する", new_post_path,class:"btn btn-default dropdown-item" %>
+               <%= link_to "山追加", new_mountain_path,class:"btn btn-default dropdown-item" %>
+             </div>
+           </ul>
          </li>
+
          <li class="nav-item">
            <%= link_to "ログアウト",destroy_user_session_path,method: :delete,class:"btn btn-outline-secondary mx-3 my-1" %>
          </li>
+
         <% else %>
          <li class="nav-item">
            <%= link_to "about",about_path,class:"btn btn-outline-secondary mx-3 my-1" %>
          </li>
+
          <li class="nav-item">
            <%= link_to "新規登録",new_user_registration_path,class:"btn btn-outline-secondary mx-3 my-1" %>
          </li>
+
          <li class="nav-item">
            <%= link_to "ログイン",new_user_session_path,class:"btn btn-outline-secondary mx-3 my-1" %>
          </li>

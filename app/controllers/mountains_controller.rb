@@ -28,7 +28,7 @@ class MountainsController < ApplicationController
   def destroy
   end
 
-  def park_params
+  def mountain_params
     params.require(:mountain).permit(:mountain_image, :mountain_name, :mountain_body, :address, :latitude, :longitude)
   end
 end
