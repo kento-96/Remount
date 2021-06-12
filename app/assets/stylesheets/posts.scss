@@ -6,8 +6,14 @@
   text-align: left;
 }
 
-.card-img-top {
+.card-img-top.index-img {
     width: 100%;
     height: 25vw;
+    object-fit: cover;
+}
+
+.card-img-top.show-img {
+    width: 100%;
+    height: 50vw;
     object-fit: cover;
 }

@@ -1,37 +1,38 @@
 <div class="container">
-  <h2 class="text-center">新規投稿する</h2>
-
-  <%= form_with model:@post ,local:true do |f| %>
-   <div class="row new-post">
-     <h3 class="new-post-title">タイトル</h3>
-     <div class="form-group">
-       <%= f.text_field :title,class:"form-control input-lg" %>
-     </div>
-   </div>
-
-   <div class="row new-post">
-      <h3 class="new-post-title">投稿内容</h3>
-        <div class="form-group">
-          <%= f.text_area :body, rows: "10", cols: "50", class:"form-control input-lg" %>
-        </div>
+  <div class="row">
+    <div class="col-sm-8 px-sm-0 offset-sm-1">
+      <h2>新規登録する</h2>
     </div>
-
-    <div class="row new-post">
-      <h3 class="new-post-title">画像の選択</h3>
-        <div class="new-post-image-box">
-          <% if @post.image.present? %>
-            <%= attachment_image_tag @post.image, class: "new-post-image", style: "border-radius: 15px;" %>
-          <% else %>
-            <%= image_tag "no_image.jpg", class: "new-post-image", style: "border-radius: 15px;" %>
-          <% end %>
+  </div>
+  <div class="row">
+    <div class="col-sm-10 px-sm-0 mx-auto mb-5">
+     <%= form_with model:@post ,local:true do |f| %>
+      <table>
+        <tr>
+          <div class="form-group">
+            <th><%= f.label :タイトル %></th>
+            <td><%= f.text_field :title, placeholder:"タイトル" %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <th><%= f.label :投稿内容 %></th>
+            <td><%= f.text_area :body, size: "50x5", placeholder:"ここに投稿内容を記述します" %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <th><%= f.label :画像の選択 %></th>
+            <th><%= f.attachment_field :image %></th>
+          </div>
+        </tr>
+        <tr>
+        <div class="form-action">
+          <th><%= f.submit "新規登録", class:"btn btn-success" %></th>
         </div>
-        <div class="new-post-image-button">
-          <%= f.attachment_field :image %>
-        </div>
+        </tr>
+      <% end %>
+      </table>
     </div>
-
-    <div class="row new-post">
-      <%= f.submit "投稿する", class:"btn btn-default btn-lg new-post-post-button" %>
-    </div>
-  <% end %>
+  </div>
 </div>
