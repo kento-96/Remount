@@ -1,0 +1,45 @@
+<div class="conteiner">
+  <h2 class="text-center"></h2>
+
+  <%= form_with model:@mountain, local:true do |f| %>
+
+  <div class="new-post-box">
+    <h3 class="new-post-name">山の名前</h3>
+    <div class="form-group">
+      <%= f.text_field :mountain_name, class:"form-control input-lg" %>
+    </div>
+  </div>
+
+  <div class="row new-post-box">
+    <h3 class="new-post-name">山の説明</h3>
+      <div class="form-group">
+        <%= f.text_area :mountain_body, rows: "10", cols: "50", class:"form-control input-lg" %>
+      </div>
+  </div>
+
+  <div class="row new-post-box">
+      <h3 class="new-post-name">山の住所</h3>
+        <div class="form-group">
+          <%= f.text_field :address, class:"form-control input-lg" %>
+        </div>
+    </div>
+
+    <div class="row new-post-box">
+      <h3 class="new-post-name">画像の選択</h3>
+        <div class="new-post-image-box">
+          <% if @mountain.mountain_image.present? %>
+            <%= attachment_image_tag @mountain.mountain_image, class: "new-post-image", style: "border-radius: 15px;" %>
+          <% else %>
+            <%= image_tag "no_image.jpg", class: "new-post-image", style: "border-radius: 15px;" %>
+          <% end %>
+        </div>
+        <div class="new-post-image-button">
+          <%= f.attachment_field :mountain_image %>
+        </div>
+    </div>
+
+    <div class="row new-post-box">
+      <%= f.submit "投稿する", class:"btn btn-default btn-lg new-post-post-button" %>
+    </div>
+  <% end %>
+</div>
