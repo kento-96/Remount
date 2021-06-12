@@ -14,6 +14,9 @@ class MountainsController < ApplicationController
   end
 
   def index
+    @mountains = Mountain.all
+             .order(created_at: :desc)
+             .page(params[:page]).per(10)
   end
 
   def edit
