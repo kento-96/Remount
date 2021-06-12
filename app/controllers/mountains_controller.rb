@@ -20,15 +20,32 @@ class MountainsController < ApplicationController
   end
 
   def edit
+    @mountain = Mountain.find(params[:id])
+    if  @mountain.user == current_user
+      render "edit"
+    else
+      redirect_to mountain_path
+    end
   end
 
   def update
+    @mountain = Mountain.find(params[:id])
+    if @mountain.update(mountain_params)
+      redirect_to mountain_path(@park)
+    else
+      render "edit"
+    end
   end
 
   def show
+    @mountain = Mountain.find(params[:id])
+    @user = @mountain.user
   end
 
   def destroy
+    mountain = Mountain.find(params[:id])
+    mountain.destroy
+    redirect_to mountains_path(mountain.user)
   end
 
   def mountain_params
