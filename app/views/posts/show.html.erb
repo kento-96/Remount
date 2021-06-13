@@ -30,6 +30,20 @@
                 <%= link_to '削除', post_path(@post), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-default destroy_post_#{@post.id}"%>
               <% end %>
             </div>
+            <div class="post-show-post-comment-box">
+              <div class="post-show-post-comment-title">
+                <h3>みんなのコメント</h3>
+              </div>
+              <table class="comments">
+                  <%= render 'comments/index', post: @post %>
+              </table>
+              <div class="comments-form">
+                <%= form_with model:[@post,@comment],local: true do |f| %>
+                  <%= f.text_area :comment, placeholder: "コメントを書こう！", size:"90x5", class: "post-show-comment-form" %>
+                  <%= f.submit 'コメントする', class: "btn btn-default comment-button" %>
+                <% end %>
+              </div>
+            </div>
          </div>
      </div>
    </div>
