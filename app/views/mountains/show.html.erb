@@ -1,0 +1,47 @@
+<div class="texts-wrapper">
+   <div class="contents-title text-center">
+     <hr class="border-line"/>
+      <h2 class="text-center">山詳細</h2>
+     <hr class="border-line"/>
+     <div class="row">
+         <div class="col-12">
+           <div class="card card-show">
+             <div>
+               <%= attachment_image_tag @mountain, :mountain_image, fallback: "no-image.jpg",class:"card-img-top show-img" %>
+             </div>
+               <div class="card-body">
+                 <p class="card-title text-center">
+                    <%= @mountain.mountain_name %>
+                 </p>
+                 <p class="card-text">
+                   <%= simple_format @mountain.mountain_body %>
+                 </p>
+                 <p class="card-text">
+                    <time>
+                      <%= @mountain.updated_at.strftime("%Y-%m-%d %H:%M") %>
+                    </time>
+                 </p>
+               </div>
+           </div>
+           <div class="post-show-post-edit">
+              <% if @mountain.user.id == current_user.id %>
+                <%= link_to "編集", edit_mountain_path(@mountain), class: "btn btn-sm btn-default edit_post_#{@mountain.id}" %>
+                <%= link_to '削除', mountain_path(@mountain), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-default destroy_post_#{@mountain.id}"%>
+              <% end %>
+            </div>
+         </div>
+     </div>
+   </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+

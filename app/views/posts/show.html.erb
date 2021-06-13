@@ -1,0 +1,50 @@
+<div class="texts-wrapper">
+   <div class="contents-title text-center">
+     <hr class="border-line"/>
+      <h2 class="text-center">投稿詳細</h2>
+     <hr class="border-line"/>
+      <h3 class="text-center"><%= @post.user.name %>さんの投稿</h3>
+     <div class="row">
+         <div class="col-12">
+           <div class="card card-show">
+             <div>
+               <%= attachment_image_tag @post, :image, fallback: "no_image.jpg", class: "card-img-top show-img" %>
+             </div>
+               <div class="card-body">
+                 <p class="card-title text-center">
+                    <%= @post.title %>
+                 </p>
+                 <p class="card-text">
+                   <%= simple_format @post.body %>
+                 </p>
+                 <p class="card-text">
+                    <time>
+                      <%= @post.updated_at.strftime("%Y-%m-%d %H:%M") %>
+                    </time>
+                 </p>
+               </div>
+           </div>
+           <div class="post-show-post-edit">
+              <% if @post.user.id == current_user.id %>
+                <%= link_to "編集", edit_post_path(@post), class: "btn btn-sm btn-default edit_post_#{@post.id}" %>
+                <%= link_to '削除', post_path(@post), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-default destroy_post_#{@post.id}"%>
+              <% end %>
+            </div>
+            <div class="post-show-post-comment-box">
+              <div class="post-show-post-comment-title">
+                <h3>みんなのコメント</h3>
+              </div>
+              <table class="comments">
+                  <%= render 'comments/index', post: @post %>
+              </table>
+              <div class="comments-form">
+                <%= form_with model:[@post,@comment],local: true do |f| %>
+                  <%= f.text_area :comment, placeholder: "コメントを書こう！", size:"90x5", class: "post-show-comment-form" %>
+                  <%= f.submit 'コメントする', class: "btn btn-default comment-button" %>
+                <% end %>
+              </div>
+            </div>
+         </div>
+     </div>
+   </div>
+ </div>

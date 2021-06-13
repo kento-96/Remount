@@ -1,0 +1,13 @@
+<div class="user-show-other-image">
+  <%= link_to user_path(user) do %>
+    <%= attachment_image_tag user, :profile_image, fallback: "no_image.jpg", class: "other-image",size: "100x100" %>
+  <% end %>
+</div>
+<div class="user-show-other-box">
+  <div class="user-show-other-name">
+    <%= user.name %>
+  </div>
+  <div class="user-show-other-body">
+    <%= user.introduction %>
+  </div>
+</div>

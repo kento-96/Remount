@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 px-sm-0 offset-sm-1">
+      <h2>山新規登録</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10 px-sm-0 mx-auto mb-5">
+     <%= form_with model:@mountain, local:true do |f| %>
+      <table>
+        <tr>
+          <div class="form-group">
+            <th><%= f.label :山の名前 %></th>
+            <td><%= f.text_field :mountain_name, placeholder:"山の名前" %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <th><%= f.label :山の説明 %></th>
+            <td><%= f.text_area :mountain_body, size: "50x5", placeholder:"ここに説明文を記述します" %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <th><%= f.label :山の住所 %></th>
+            <td><%= f.text_field :address, placeholder:"山の住所" %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <th><%= f.label :山の画像 %></th>
+            <th><%= f.attachment_field :mountain_image %></th>
+          </div>
+        </tr>
+        <tr>
+        <div class="form-action">
+          <th><%= f.submit "新規登録", class:"btn btn-success" %></th>
+        </div>
+        </tr>
+      <% end %>
+      </table>
+    </div>
+  </div>
+</div>

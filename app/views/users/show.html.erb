@@ -1,0 +1,14 @@
+<div class="contianer mt-5 mb-5">
+  <div class=" col-xs-12 col-sm-12 col-md-6 mx-auto">
+    <%= attachment_image_tag @user, :profile_image, fallback: "no_image.jpeg",size: "340x220"%>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-6 user-details mx-auto">
+    <h3><%= @user.name %></h3>
+    <p><%= @user.introduction %></p>
+    <%= link_to edit_user_path(current_user) do %>
+        <button type="button" class="btn btn-default personal-edit-button">
+          編集する
+        </button>
+    <% end %>
+  </div>
+</div>

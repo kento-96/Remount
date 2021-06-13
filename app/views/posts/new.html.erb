@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 px-sm-0 offset-sm-1">
+      <h2>新規登録する</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10 px-sm-0 mx-auto mb-5">
+     <%= form_with model:@post ,local:true do |f| %>
+      <table>
+        <tr>
+          <div class="form-group">
+            <th><%= f.label :タイトル %></th>
+            <td><%= f.text_field :title, placeholder:"タイトル" %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <th><%= f.label :投稿内容 %></th>
+            <td><%= f.text_area :body, size: "50x5", placeholder:"ここに投稿内容を記述します" %></td>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
+            <th><%= f.label :画像の選択 %></th>
+            <th><%= f.attachment_field :image %></th>
+          </div>
+        </tr>
+        <tr>
+        <div class="form-action">
+          <th><%= f.submit "新規登録", class:"btn btn-success" %></th>
+        </div>
+        </tr>
+      <% end %>
+      </table>
+    </div>
+  </div>
+</div>
