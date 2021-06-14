@@ -7,7 +7,7 @@
            <div class="card">
              <div>
                 <%= link_to post_path(post) do %>
-                <%= attachment_image_tag post, :image, fallback: "no-image.jpg",class:"card-img-top index-img" %>
+                <%= attachment_image_tag post, :image, fallback: "no_image.jpg",class:"card-img-top index-img" %>
                 <% end %>
              </div>
              <p class="post-index-user-name">
@@ -18,6 +18,11 @@
                <i class="far fa-comment"></i>
                 <%= post.comments.count %>
                 <%= render "favorites/favorites", post: post %>
+             </p>
+             <p class="post-index-post-tag">
+               <% post.tags.each do |tag| %>
+                  <%= tag.tag_name %>
+               <% end %>
              </p>
                <div class="card-body">
                  <p class="card-title">

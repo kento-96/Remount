@@ -7,6 +7,8 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    tag_list = params[:post][:tag_names].split(",")
+    @post.tags_save(tag_list)
     if @post.save
       redirect_to post_path(@post)
     else
