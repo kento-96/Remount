@@ -53,6 +53,17 @@ class PostsController < ApplicationController
     redirect_to posts_path(post.user)
   end
 
+  def search
+    if params[:search].nil?
+      @posts = Post.page(params[:page]).per(10)
+                   .order(created_at: :desc)
+    else
+      @posts = Tag.find_by(tag_name:params[:search]).posts
+                   .page(params[:page]).per(10)
+      @value = params[:search]
+    end
+  end
+
   private
 
   def post_params

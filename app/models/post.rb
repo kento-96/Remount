@@ -22,6 +22,11 @@ class Post < ApplicationRecord
       inspected_tag = Tag.where(tag_name: tag).first_or_create
       self.tags << inspected_tag
     end
+  end
 
+  def self.search(search)
+    return Post.all unless search
+    # Post.where(["body ?", "%#{search}%"])
+    Post.joins(:tags).where(["tag_name ?", "%#{search}%"])
   end
 end
