@@ -1,14 +1,6 @@
-<p>検索</p>
-<%= form_tag(search_path,:method => 'get') do %>
-  <%= text_field_tag :search %>
-  <%= submit_tag 'Search', :name => nil %>
-<% end %>
-
-<h2 class="post-index-title-title">"<%= @value %>"の検索結果</h2>
-
 <div class="texts-wrapper">
    <div class="contents-title text-center">
-     <h3>投稿一覧</h3>
+     <h3><%= @value %>"の検索結果</h3>
      <div class="row">
        <% @posts.each do |post| %>
          <div class="col-12 col-md-6 col-lg-4">
