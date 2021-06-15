@@ -18,6 +18,15 @@
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
 
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+
 header{
   position: fixed;
   width: 100%;
@@ -27,4 +36,12 @@ header{
 
 main{
   padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+footer{
+  min-height: 50px;
+  background: #F5F5F5;
+  padding: 2rem 0;
+  margin-top: auto;
 }
