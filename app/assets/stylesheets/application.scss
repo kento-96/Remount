@@ -17,3 +17,14 @@
 @import "bootstrap";
 @import 'font-awesome-sprockets';
 @import 'font-awesome';
+
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  background-color: #fff;
+}
+
+main{
+  padding-top: 80px;
+}
