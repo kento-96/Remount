@@ -24,9 +24,9 @@ class Post < ApplicationRecord
     end
   end
 
-  def self.search(search)
-    return Post.all unless search
-    # Post.where(["body ?", "%#{search}%"])
-    Post.joins(:tags).where(["tag_name ?", "%#{search}%"])
-  end
+  # def self.search(search)
+  #   return Post.all unless search
+  #   # Post.where(["body ?", "%#{search}%"])
+  #   Post.joins(:tags).where(["tag_name ?", "%#{search}%"])
+  # end
 end

@@ -1,9 +1,9 @@
-<div class="texts-wrapper">
+<div class="texts-wrapper container">
    <div class="contents-title text-center">
      <h3>投稿一覧</h3>
      <div class="row">
        <% @posts.each do |post| %>
-         <div class="col-12 col-md-6 col-lg-4">
+         <div class="col-12 col-md-6 col-lg-4 mb-2">
            <div class="card">
              <div>
                 <%= link_to post_path(post) do %>
@@ -46,8 +46,7 @@
        <% end %>
      </div>
    </div>
- </div>
-
- <div class="post-index-pagination">
+   <div class="d-flex align-items-center justify-content-center mt-2">
     <%= paginate @posts %>
+   </div>
  </div>
