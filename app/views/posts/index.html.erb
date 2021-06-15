@@ -17,7 +17,9 @@
              <p>
                <i class="far fa-comment"></i>
                 <%= post.comments.count %>
+                <span id="favorite-<%= post.id%>">
                 <%= render "favorites/favorites", post: post %>
+                </span>
              </p>
              <p class="post-index-post-tag">
                <% post.tags.each do |tag| %>

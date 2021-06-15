@@ -37,12 +37,12 @@
               <div class="post-show-post-comment-title">
                 <h3>みんなのコメント</h3>
               </div>
-              <table class="comments">
+              <table class="comments" id="comment_area">
                   <%= render 'comments/index', post: @post %>
               </table>
               <div class="comments-form">
-                <%= form_with model:[@post,@comment],local: true do |f| %>
-                  <%= f.text_area :comment, placeholder: "コメントを書こう！", size:"90x5", class: "post-show-comment-form" %>
+                <%= form_with model:[@post,@comment] do |f| %>
+                  <%= f.text_area :comment, placeholder: "コメントを書こう！", size:"90x5", class: "post-show-comment-form",id: "form" %>
                   <%= f.submit 'コメントする', class: "btn btn-default comment-button" %>
                 <% end %>
               </div>

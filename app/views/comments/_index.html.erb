@@ -4,22 +4,20 @@
     <tr class="comment-user-profile-box">
       <th class="comment-user-image">
         <%= link_to user_path(comment.user) do %>
-          <%= attachment_image_tag comment.user, :profile_image, fallback: "no_image.jpg", class: "comment-image",size:"100x100" %>
+          <%= attachment_image_tag comment.user, :profile_image, fallback: "no_image.jpg", class: "comment-image",size:"50x50" %>
         <% end %>
-        <%= comment_user.name %>
+        <p><%= comment_user.name %></p>
+        <td class="comment-user-content">
+         <%= comment.comment %>
+        </td>
       </th>
     </tr>
   </thead>
   <tbody>
-    <tr class="comment-user-body-box">
-      <td class="comment-user-content">
-        <%= comment.comment %>
-      </td>
-    </tr>
     <tr class="comment-delete-box">
       <td class="comment-delete">
         <% if current_user == comment.user %>
-    	    <%= link_to '削除', post_comment_path(comment.post_id, comment.id), class: 'btn-sm btn-danger comment-delete', method: :delete %>
+    	    <%= link_to '削除', post_comment_path(comment.post_id, comment.id), class: 'btn-sm btn-danger comment-delete',remote: true, method: :delete %>
         <% end %>
       </td>
     </tr>
