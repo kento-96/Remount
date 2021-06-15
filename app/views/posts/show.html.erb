@@ -30,6 +30,9 @@
                 <%= link_to '削除', post_path(@post), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-default destroy_post_#{@post.id}"%>
               <% end %>
             </div>
+            <% unless @post.user == current_user %>
+             <%= link_to @post.user.name,user_path(@post.user_id)%>
+            <% end %>
             <div class="post-show-post-comment-box">
               <div class="post-show-post-comment-title">
                 <h3>みんなのコメント</h3>
