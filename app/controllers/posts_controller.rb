@@ -44,6 +44,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @user = @post.user
     @comments = @post.comments
+                     .order(created_at: :desc)
     @comment = current_user.comments.new
   end
 
@@ -54,14 +55,14 @@ class PostsController < ApplicationController
   end
 
   def search
-    if params[:search].nil?
-      @posts = Post.page(params[:page]).per(10)
-                   .order(created_at: :desc)
-    else
-      @posts = Tag.find_by(tag_name:params[:search]).posts
-                   .page(params[:page]).per(10)
+      tag = Tag.find_by(tag_name: params[:search])
+      if tag.present?
+        @posts = tag.posts.page(params[:page]).per(10)
+      else
+        @posts = Post.where(id:  PostTag.all.pluck('post_id').uniq).page(params[:page]).per(10)
+      end
       @value = params[:search]
-    end
+
   end
 
   private

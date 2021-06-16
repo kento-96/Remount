@@ -31,7 +31,7 @@ class MountainsController < ApplicationController
   def update
     @mountain = Mountain.find(params[:id])
     if @mountain.update(mountain_params)
-      redirect_to mountain_path(@park)
+      redirect_to mountain_path(@mountain)
     else
       render "edit"
     end

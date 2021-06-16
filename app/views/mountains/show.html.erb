@@ -23,6 +23,30 @@
                  </p>
                </div>
            </div>
+
+           <h2>gmap</h2>
+            <div id="map"></div>
+<style>
+     #map {
+     height: 500px;
+     width: 70%;
+    }
+</style>
+<script>
+  function initMap() {
+   var uluru = {lat: <%= @mountain.latitude %>, lng: <%= @mountain.longitude %>};
+    //var uluru = {lat: 40.7828, lng: -73.9653};
+    var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: uluru
+    });
+    var marker = new google.maps.Marker({
+      position: uluru,
+      map: map
+    });
+       }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=<%=  ENV['API_KEY'] %>&callback=initMap"async defer></script>
            <div class="post-show-post-edit">
               <% if @mountain.user.id == current_user.id %>
                 <%= link_to "編集", edit_mountain_path(@mountain), class: "btn btn-sm btn-default edit_post_#{@mountain.id}" %>

@@ -7,8 +7,8 @@
           <%= attachment_image_tag comment.user, :profile_image, fallback: "no_image.jpg", class: "comment-image",size:"50x50" %>
         <% end %>
         <p><%= comment_user.name %></p>
-        <td class="comment-user-content">
-         <%= comment.comment %>
+        <td class="comment-user-content text-left">
+         <%= simple_format(comment.comment) %>
         </td>
       </th>
     </tr>

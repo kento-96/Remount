@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2021_06_14_000716) do
     t.text "mountain_body"
     t.string "address"
     t.string "mountain_image_id"
-    t.float "laitude"
+    t.float "latitude"
     t.float "longitude"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

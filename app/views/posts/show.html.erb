@@ -33,19 +33,20 @@
             <% unless @post.user == current_user %>
              <%= link_to @post.user.name,user_path(@post.user_id)%>
             <% end %>
+            <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
             <div class="post-show-post-comment-box">
               <div class="post-show-post-comment-title">
                 <h3>みんなのコメント</h3>
               </div>
-              <table class="comments" id="comment_area">
-                  <%= render 'comments/index', post: @post %>
-              </table>
               <div class="comments-form">
                 <%= form_with model:[@post,@comment] do |f| %>
-                  <%= f.text_area :comment, placeholder: "コメントを書こう！", size:"90x5", class: "post-show-comment-form",id: "form" %>
+                  <%= f.text_area :comment, placeholder: "コメントを書こう！", size:"90x2", class: "post-show-comment-form",id: "form" %>
                   <%= f.submit 'コメントする', class: "btn btn-default comment-button" %>
                 <% end %>
               </div>
+              <table class="comments" id="comment_area">
+                  <%= render 'comments/index', post: @post %>
+              </table>
             </div>
          </div>
      </div>

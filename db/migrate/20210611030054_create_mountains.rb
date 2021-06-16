@@ -7,7 +7,7 @@ class CreateMountains < ActiveRecord::Migration[5.2]
       t.text :mountain_body
       t.string :address
       t.string :mountain_image_id
-      t.float :laitude
+      t.float :latitude
       t.float :longitude
 
       t.timestamps
