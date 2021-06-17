@@ -55,9 +55,9 @@ class PostsController < ApplicationController
   end
 
   def search
-      tag = Tag.find_by(tag_name: params[:search])
-      if tag.present?
-        @posts = tag.posts.page(params[:page]).per(10)
+      @tag = Tag.find_by(tag_name: params[:search])
+      if @tag.present?
+        @posts = @tag.posts.page(params[:page]).per(10)
       else
         @posts = Post.where(id:  PostTag.all.pluck('post_id').uniq).page(params[:page]).per(10)
       end

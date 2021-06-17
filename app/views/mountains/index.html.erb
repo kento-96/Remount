@@ -1,9 +1,9 @@
-<div class="texts-wrapper">
+<div class="texts-wrapper container">
    <div class="contents-title text-center">
      <h3>山一覧</h3>
      <div class="row">
        <% @mountains.each do |mountain| %>
-         <div class="col-12 col-md-6 col-lg-4">
+         <div class="col-12 col-md-6 col-lg-4 mb-2">
            <div class="card">
              <div>
                 <%= link_to mountain_path(mountain) do %>
