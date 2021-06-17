@@ -18,6 +18,12 @@
         </tr>
         <tr>
           <div class="form-group">
+            <%= f.label :タグ %>
+            <%= f.text_field :tag_names, placeholder:",で区切ってください" ,class:"form-control mb-3"%>
+          </div>
+        </tr>
+        <tr>
+          <div class="form-group">
             <%= f.label :画像の選択, class:"form_label"%>
             <%= f.attachment_field :image,class:"mb-3 ml-3"%>
           </div>
