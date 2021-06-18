@@ -51,7 +51,7 @@
             <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
             <div class="post-show-post-comment-box">
               <div class="post-show-post-comment-title">
-                <h3>みんなのコメント</h3>
+                <h3>コメント</h3>
               </div>
               <div class="comments-form">
                 <%= form_with model:[@post,@comment] do |f| %>
