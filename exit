@@ -1,0 +1,290 @@
+[33mcommit 2dad7ae4d154a1af7de14d5de2cfcbaa0f8f2bb3[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 18 07:56:28 2021 +0000
+
+    create トップページ
+
+[33mcommit c4a4cc8ece4e34f2d8a79a61de4319880ad84d5a[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 18 07:36:16 2021 +0000
+
+    create トップページ
+
+[33mcommit c8b18cd217f9482fd2e85110e3d42067bc340052[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Thu Jun 17 23:32:53 2021 +0000
+
+    edit comment_index レイアウト
+
+[33mcommit fd60adf1679b4113f0d4ce461cf38971eee3e5d3[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Thu Jun 17 23:20:02 2021 +0000
+
+    edit post_show レイアウト
+
+[33mcommit 05d850906edfe705bd18669d3e18ff0ddbeaeae9[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Thu Jun 17 23:07:38 2021 +0000
+
+    edit post_edit レイアウト
+
+[33mcommit 32c17c1f73e5023074940c6855834a2ea1e1915d[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Thu Jun 17 22:51:56 2021 +0000
+
+    レイアウト修正
+
+[33mcommit 4368326ebb0415bc411d09755067ea91df9ce0af[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Thu Jun 17 11:12:48 2021 +0000
+
+    edit mountain_index
+
+[33mcommit 82ab76a7a6ab6f6e9b7f91a4178ae252a689c0ae[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Wed Jun 16 12:10:35 2021 +0000
+
+    create 地図機能
+
+[33mcommit 886b577f66c30abae57499793ff078f03e208dcb[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Tue Jun 15 10:11:55 2021 +0000
+
+    edit post_index paginate
+
+[33mcommit 31a166c111e1ff720cf3d41cbb0a0836f1d98d6d[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Tue Jun 15 08:40:30 2021 +0000
+
+    create footer
+
+[33mcommit 9af994ebc9e0d012b35476334fcddf0b237cd0ba[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Tue Jun 15 08:10:35 2021 +0000
+
+    ヘッダー固定
+
+[33mcommit ed6f83ec1c1534209c2c698c71ded17a939b52f8[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Tue Jun 15 07:55:18 2021 +0000
+
+    edit post_showレイアウト
+
+[33mcommit f27704091a3adac25776a80a78ded095d31520f3[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Tue Jun 15 06:28:29 2021 +0000
+
+    いいね、コメント非同期
+
+[33mcommit b4c3c4b40e92abc2f34c28e4bb7f8e3912e48cb4[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Tue Jun 15 02:29:18 2021 +0000
+
+     create フォロワー機能
+
+[33mcommit 3285fb3b315d189b6272932d030d3f5f5c164bee[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Tue Jun 15 01:33:26 2021 +0000
+
+    edit header
+
+[33mcommit d85ae23f122401b123b7e99985936585b5b0c085[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Mon Jun 14 12:45:39 2021 +0000
+
+    create 検索機能
+
+[33mcommit dd339ac8c10e1af6f678e408c4225b26528aeb63[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Mon Jun 14 03:55:07 2021 +0000
+
+    create タグ機能
+
+[33mcommit efc5c8b1498c1b83af90fcc6b96825efb7676971[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sun Jun 13 07:29:54 2021 +0000
+
+    deploy setting
+
+[33mcommit 023453c021fb100a08175049b4c2eb9d90c90d7b[m
+Merge: ea94018 505da19
+Author: kento-96 <81151370+kento-96@users.noreply.github.com>
+Date:   Sun Jun 13 16:09:19 2021 +0900
+
+    Merge pull request #1 from kento-96/develop
+    
+    Develop
+
+[33mcommit 505da1950f845645b7441b8f1080bcc75c877a4f[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sun Jun 13 01:48:34 2021 +0000
+
+    create コメント機能、いいね機能
+
+[33mcommit c52792b6853688afd3a9794727811969d683900b[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sat Jun 12 12:37:05 2021 +0000
+
+    edit 投稿詳細画面　レイアウト
+
+[33mcommit bcc957eb05099e959671e2eef60ed4ee6c2bb93c[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sat Jun 12 12:30:36 2021 +0000
+
+    edit 山詳細画面、投稿詳細画面　レイアウト
+
+[33mcommit 7af058a62abaf6cf79b1d2b4148f90a76502ffff[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sat Jun 12 09:50:09 2021 +0000
+
+    edit 山新規登録画面レイアウト
+
+[33mcommit 6c2094d475beae1ee51918386a7f0383a3534820[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sat Jun 12 09:16:21 2021 +0000
+
+    create 山詳細画面、編集画面
+
+[33mcommit d42ce3a4eaa4b3d1f7ae574284431b2063d0335d[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sat Jun 12 08:14:57 2021 +0000
+
+    create 山一覧画面
+
+[33mcommit f0b08ed982da5c04688ea71cd955e491aa81c157[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sat Jun 12 07:54:16 2021 +0000
+
+    edit ヘッダードロップダウン
+
+[33mcommit 09ff72b4256a013e93f783c059038d212c59c726[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sat Jun 12 07:15:53 2021 +0000
+
+    create 山新規投稿画面
+
+[33mcommit 7136cbc4590329ef92d47e266ec84e7065ab5097[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sat Jun 12 06:56:25 2021 +0000
+
+    create 投稿詳細画面、投稿編集画面
+
+[33mcommit e687eb7bc3e49ce500a6328f37aa75f2970801aa[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Sat Jun 12 01:53:40 2021 +0000
+
+    create 投稿一覧画面
+
+[33mcommit bd4499114eb8a1f85d8ad3e31e54fed3fe506055[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 23:44:07 2021 +0000
+
+    create 新規投稿画面
+
+[33mcommit 68b18a10c9e76ad88ed270564c3170b98e0cf13d[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 12:47:54 2021 +0000
+
+    create 退会確認画面
+
+[33mcommit b9977f12e4bbfe825d4e18d0f75b66c22366dba5[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 09:57:06 2021 +0000
+
+    create user_show,edit_view
+
+[33mcommit 13c7f6defaf90d33b5e5e485c5ce18e40481a9ed[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 08:54:16 2021 +0000
+
+    add bootstrap
+
+[33mcommit 46b190740cff3aed1639e8fe7e4d2b1ff0f25d12[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 08:42:37 2021 +0000
+
+    名前でログイン
+
+[33mcommit 0694575121f9633f66de855bfe9b4a3cd69ac1b5[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 08:26:43 2021 +0000
+
+    create header
+
+[33mcommit 433c03d249b1b9118bdfc53d6864a075446670ad[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 06:44:39 2021 +0000
+
+    create view file
+
+[33mcommit 65f66f78e99fea27f998f7ecd341af060fb34c38[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 06:23:05 2021 +0000
+
+    アソシエーション
+
+[33mcommit d2bb3e536176d3fb8554a8a6830e96c1365826cf[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 06:07:11 2021 +0000
+
+    ルーティング
+
+[33mcommit 7a99ac91c1c777c8ed233795324adab844888844[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 05:17:19 2021 +0000
+
+    create controller
+
+[33mcommit c2bd1f86f3449231149238ea423b159c1b3fca31[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 03:14:15 2021 +0000
+
+    create relationshipテーブル
+
+[33mcommit 623fd1950c6af3bb3cc6b4acca769361fd484e71[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 03:10:56 2021 +0000
+
+    create postテーブル
+
+[33mcommit c965e686b82100943f87c09a50cc91fac9ae98ee[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 03:06:51 2021 +0000
+
+    create mountainテーブル
+
+[33mcommit cf88b5c38b306c00975843fb744782f6bdd5679a[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 02:59:48 2021 +0000
+
+    create favoriteテーブル
+
+[33mcommit 63075af4d12cf8679af1de1d73ae4f90b35dfad5[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 01:36:57 2021 +0000
+
+    create commentテーブル
+
+[33mcommit d0741618314ba5b34a34d2d172e12f15c6d4a812[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 01:25:14 2021 +0000
+
+    create userテーブル
+
+[33mcommit cfff63a2f88e139b2d6bb2c1844cb4c67466bd55[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 01:05:05 2021 +0000
+
+    add Gemfile
+
+[33mcommit ea9401838e0b99cc9e090e8bf9912749aa5f39c2[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 00:48:02 2021 +0000
+
+    edit README
+
+[33mcommit b98ada3a2f30720b1f195413d0679ca35155da85[m[33m ([m[1;31morigin/master[m[33m, [m[1;32mmaster[m[33m)[m
+Author: kento-96 <kento.soccer.1107@gmail.com>
+Date:   Fri Jun 11 00:39:13 2021 +0000
+
+    create Remount
