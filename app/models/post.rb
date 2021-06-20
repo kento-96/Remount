@@ -8,6 +8,13 @@ class Post < ApplicationRecord
   has_many :post_tags
   has_many :tags, through: :post_tags
 
+
+  with_options presence: true do
+    validates :title, length: { maximum: 25 }
+    validates :body
+    validates :image
+  end
+
   def favorited_by?(user)
     favorites.where(user_id: user.id).exists?
   end

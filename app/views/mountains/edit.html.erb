@@ -2,7 +2,20 @@
   <h2 class="text-center my-5">山編集</h2>
   <div class="row">
     <div class="col-8 offset-2 mb-5">
+      
+      <% if @mountain.errors.any? %>
+        <div class="text-danger" role="alert">
+          <%= @mountain.errors.count %>件のエラーが発生しました
+          <ul>
+            <% @mountain.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      
       <%= form_with model: @mountain, local: true do |f| %>
+      
       <table>
         <tr>
           <div class="form-group">

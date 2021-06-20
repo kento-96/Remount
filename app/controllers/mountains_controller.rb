@@ -1,4 +1,5 @@
 class MountainsController < ApplicationController
+  before_action :authenticate_user!
   def new
     @mountain = Mountain.new
   end

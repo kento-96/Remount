@@ -24,15 +24,15 @@ class UsersController < ApplicationController
   end
 
   def unsubscribe
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def withdraw
     @user = User.find(params[:id])
-    #is_deletedカラムにフラグを立てる(defaultはfalse)
     @user.update(is_deleted: true)
     reset_session
-    redirect_to root_path
+    flash[:notice] = "ありがとうございました。またのご利用を心よりお待ちしております。"
+    redirect_to about_path
   end
 
   private

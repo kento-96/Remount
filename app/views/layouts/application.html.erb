@@ -13,6 +13,9 @@
    <div id="wrapper">
     <%= render "layouts/header"%>
      <main>
+       <div id="flash">
+        <%= render "layouts/flash" %>
+       </div>
        <%= yield %>
      </main>
     <%= render "layouts/footer"%>
