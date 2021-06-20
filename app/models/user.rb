@@ -31,4 +31,6 @@ class User < ApplicationRecord
   def active_for_authentication?
     super && (self.is_deleted == false)
   end
+  
+  validates :name, length: { maximum: 20 } ,presence: true
 end
