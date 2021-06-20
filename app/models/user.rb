@@ -28,8 +28,6 @@ class User < ApplicationRecord
   end
 
 
-  #退会済み(is_deleted==true)のユーザーを弾くためのメソッド
-  # falseならtrueを返すようにしている
   def active_for_authentication?
     super && (self.is_deleted == false)
   end

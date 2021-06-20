@@ -4,17 +4,17 @@ class Users::SessionsController < Devise::SessionsController
   before_action :reject_user, only: [:create]
   protected
 
- # 会員の論理削除のための記述。退会後は、同じアカウントでは利用できない。
+
   def reject_user
     @user = User.find_by(email: params[:user][:email].downcase)
     if @user
-      bybug
       if (@user.valid_password?(params[:user][:password]) && (@user.active_for_authentication? == false))
         flash[:alert] = "このアカウントは退会済みです。"
         redirect_to new_user_session_path
       end
     else
       flash[:alert] = "必須項目を入力してください"
+      redirect_to new_user_session_path
     end
   end
 
