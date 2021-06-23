@@ -1,0 +1,51 @@
+<div class="texts-wrapper container mt-5">
+   <div class="contents-title text-center">
+     <div class="row">
+       <% post.each do |post| %>
+         <div class="col-12 col-md-6 col-lg-4 mb-2">
+           <div class="card h-100">
+             <div>
+                <%= link_to post_path(post) do %>
+                <%= attachment_image_tag post, :image, fallback: "no_image.jpg",class:"card-img-top index-img img-fluid" %>
+                <% end %>
+             </div>
+             <p class="post-index-user text-left pl-3">
+               <span class="text-left">
+                  <i class="fas fa-user-circle"></i>
+                  <%= post.user.name %>
+               </span>
+               <span class="pl-3">
+                  <i class="far fa-comment"></i>
+                   <%= post.comments.count %>
+                   <span id="favorite-<%= post.id%>">
+                     <%= render "favorites/favorites", post: post %>
+                   </span>
+                </span>
+             </p>
+             <div class="post-index-post-tag ">
+               <% post.tags.each do |tag| %>
+                 <span class="border border-dark rounded p-1 mr-1 small"><%= tag.tag_name%></span>
+               <% end %>
+             </div>
+               <div class="card-body">
+                 <p class="card-title font-weight-bold">
+                   <%= post.title %>
+                 </p>
+                 <p class="card-text">
+                   <%= post.body.truncate(30) %>
+                 </p>
+                 <p class="card-text">
+                    <time>
+                      <%= post.updated_at.strftime("%Y-%m-%d %H:%M") %>
+                    </time>
+                 </p>
+               </div>
+           </div>
+         </div>
+       <% end %>
+     </div>
+   </div>
+   <div class="d-flex align-items-center justify-content-center mt-2">
+    <%= paginate post %>
+   </div>
+</div>

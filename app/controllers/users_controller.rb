@@ -2,7 +2,9 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
   def show
     @user=User.find(params[:id])
-
+    @posts=@user.posts.all
+                .order(created_at: :desc) #新しい順に並び替える
+                 .page(params[:page]).per(6)
   end
 
   def edit
