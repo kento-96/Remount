@@ -222,6 +222,12 @@ describe 'ユーザーログイン前のテスト' do
       it 'タイトルが表示される' do
         expect(page).to have_content 'Remount'
       end
+      it '検索ボタンが表示されている' do
+        expect(page).to have_button 'Search'
+      end
+      it '検索フォームが表示されている' do
+        expect(page).to have_field 'search'
+      end
       it 'マイページボタンが表示されてい' do
         expect(page).to have_link('マイページ')
       end
