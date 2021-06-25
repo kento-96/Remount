@@ -48,7 +48,7 @@
                 <%= link_to '削除', post_path(@post), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-default destroy_post_#{@post.id}"%>
               <% end %>
             </div>
-            <script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['API_KEY'] %>&callback=initMap" async defer></script>
+
             <div class="post-show-post-comment-box">
               <div class="post-show-post-comment-title">
                 <h3>コメント</h3>
