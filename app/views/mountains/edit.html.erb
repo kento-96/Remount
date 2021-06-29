@@ -2,7 +2,7 @@
   <h2 class="text-center my-5">山編集</h2>
   <div class="row">
     <div class="col-8 offset-2 mb-5">
-      
+
       <% if @mountain.errors.any? %>
         <div class="text-danger" role="alert">
           <%= @mountain.errors.count %>件のエラーが発生しました
@@ -13,9 +13,9 @@
           </ul>
         </div>
       <% end %>
-      
+
       <%= form_with model: @mountain, local: true do |f| %>
-      
+
       <table>
         <tr>
           <div class="form-group">
@@ -32,7 +32,7 @@
         <tr>
           <div class="form-group">
             <%= f.label :住所, class:"form_label" %>
-            <%= f.text_area :address, size: "50x5", placeholder:"ここに説明文を記述します",class:"form-control form-control-lg mb-3" %>
+            <%= f.text_area :address, size: "50x5", placeholder:"ここに住所を記述します",class:"form-control form-control-lg mb-3" %>
           </div>
         </tr>
         <tr>
